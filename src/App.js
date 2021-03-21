@@ -1,9 +1,11 @@
 import React from 'react';
+import Container from './components/Container/Container';
 import Profile from './components/Profile/Profile';
 import Statistics from './components/Statistic/Statistics';
-import Container from './components/Container/Container';
+import FriendList from './components/FriendList/FriendList';
 import { name, location, tag, avatar, stats } from './user.json';
 import statisticalData from './statistical-data.json';
+import friends from './friends.json';
 // import styles from './App.module.css';
 
 function App() {
@@ -24,6 +26,8 @@ function App() {
       <Statistics title="Upload stats" stats={statisticalData} />
 
       <Statistics stats={statisticalData} />
+
+      <FriendList friends={friends} />
     </Container>
   );
 }
