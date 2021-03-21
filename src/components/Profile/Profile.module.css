@@ -18,7 +18,7 @@
 }
 
 .stats {
-  composes: list from '../../App.module.css';
+  composes: list from '../../index.css';
   display: flex;
   justify-content: center;
   align-items: center;

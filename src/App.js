@@ -1,16 +1,15 @@
 import React from 'react';
 import Profile from './components/Profile/Profile';
 import Statistics from './components/Statistic/Statistics';
+import Container from './components/Container/Container';
 import { name, location, tag, avatar, stats } from './user.json';
 import statisticalData from './statistical-data.json';
-import styles from './App.module.css';
+// import styles from './App.module.css';
 
 function App() {
   return (
-    <div className={styles['container']}>
+    <Container>
       <h1>React Homework #1</h1>
-
-      <h3>Task - 1</h3>
 
       <Profile
         name={name}
@@ -22,18 +21,11 @@ function App() {
         views={stats.views}
       />
 
-      <h3>Task - 2</h3>
-
       <Statistics title="Upload stats" stats={statisticalData} />
 
       <Statistics stats={statisticalData} />
-    </div>
+    </Container>
   );
 }
 
 export default App;
-
-/*
-<Statistics title="Upload stats" stats={statisticalData} />;
-<Statistics stats={statisticalData} />;
-*/

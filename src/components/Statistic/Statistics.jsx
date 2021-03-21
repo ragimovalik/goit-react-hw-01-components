@@ -7,11 +7,11 @@ const colorSet = [
   '#f9ffc9',
   '#d3ffd4',
   '#d1ebff',
-  '#ffd2d9',
-  '#ffe7c9',
-  '#f9ffc9',
-  '#d3ffd4',
-  '#d1ebff',
+  '#4ea7b9',
+  '#cae43a',
+  '#e9d473',
+  '#bbbbbb',
+  '#aaaaaa',
 ];
 
 function Statistics({ title, stats }) {
@@ -32,10 +32,14 @@ function Statistics({ title, stats }) {
   ));
 
   return (
-    <section className={styles['Statistics']}>
-      <>{title ? listTitle : ''} </>
-      <ul className={styles['Stats__list']}>{listItem}</ul>
-    </section>
+    <>
+      <h3>Task - 2</h3>
+
+      <section className={styles['Statistics']}>
+        <>{title ? listTitle : ''} </>
+        <ul className={styles['Stats__list']}>{listItem}</ul>
+      </section>
+    </>
   );
 }
 
@@ -52,39 +56,3 @@ Statistics.propTypes = {
 };
 
 export default Statistics;
-
-/*
-Компонент должен принимать два пропа title и stats, 
-в которых указывается заголовок и объект статистики.
-
-title - не обязателен, и если он не передан, не должна 
-рендериться разметка заголовка <h2>.
-stats - массив объектов содержащих информацию о элементе 
-статистики. Может иметь произвольное кол-во элементов.
-Цвет фона элемента статистики в оформлении можно пропустить, 
-либо создать функцию для генерации случайного цвета.
-Компонент должен создавать DOM элемент следующей структуры.
-
-<section class="statistics">
-  <h2 class="title">Upload stats</h2>
-
-  <ul class="stat-list">
-    <li class="item">
-      <span class="label">.docx</span>
-      <span class="percentage">4%</span>
-    </li>
-    <li class="item">
-      <span class="label">.mp3</span>
-      <span class="percentage">14%</span>
-    </li>
-    <li class="item">
-      <span class="label">.pdf</span>
-      <span class="percentage">41%</span>
-    </li>
-    <li class="item">
-      <span class="label">.mp4</span>
-      <span class="percentage">12%</span>
-    </li>
-  </ul>
-</section>
-*/
