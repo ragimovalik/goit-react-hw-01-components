@@ -1,23 +1,29 @@
+import FriendListItem from '../FriendListItem/FriendListItem';
 import styles from './FriendList.module.css';
 
 function FriendList({ friends }) {
-  const friend = friends.map(({ id, avatar, name, isOnline }) => {
-    return (
-      <li className={styles.Friend__item} key={id}>
-        <span
-          className={styles.Friend__status}
-          style={{ backgroundColor: isOnline ? 'green' : 'red' }}
-        ></span>
-        <img className={styles.Friend__avatar} src={avatar} alt="" width="48" />
-        <p className={styles.Friend__name}>{name}</p>
-      </li>
-    );
-  });
+  //   const friend = friends.map(({ id, avatar, name, isOnline }) => {});
 
   return (
     <>
       <h3>Task - 3</h3>
-      <ul className={styles.Friend__list}>{friend}</ul>
+
+      {
+        <ul className={styles.Friend__list}>
+          {friends.map(({ id, avatar, name, isOnline }) => {
+            return (
+              <>
+                <FriendListItem
+                  id={id}
+                  avatar={avatar}
+                  name={name}
+                  isOnline={isOnline}
+                />
+              </>
+            );
+          })}
+        </ul>
+      }
     </>
   );
 }
