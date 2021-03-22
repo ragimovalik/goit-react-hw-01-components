@@ -33,7 +33,7 @@ function Statistics({ title, stats }) {
 
   return (
     <>
-      <h3>Task - 2</h3>
+      <h3 className={styles['title']}>Task - 2</h3>
 
       <section className={styles['Statistics']}>
         <>{title ? listTitle : ''} </>
@@ -52,7 +52,7 @@ Statistics.propTypes = {
       label: PropTypes.string.isRequired,
       percentage: PropTypes.number.isRequired,
     }),
-  ),
+  ).isRequired,
 };
 
 export default Statistics;

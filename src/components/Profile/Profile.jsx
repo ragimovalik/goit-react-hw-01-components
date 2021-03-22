@@ -4,21 +4,21 @@ import styles from './Profile.module.css';
 function Profile({ name, avatar, tag, location, followers, likes, views }) {
   return (
     <>
-      <h3>Task - 1</h3>
+      <h3 className={styles['title']}>Task - 1</h3>
 
-      <div className={styles['profile__wrap']}>
-        <div className={styles['profile__description']}>
+      <div className={styles['Profile__wrap']}>
+        <div className={styles['Profile__description']}>
           <img
             src={avatar}
             alt="Аватар пользователя"
-            className={styles['profile__avatar']}
+            className={styles['Profile__avatar']}
           />
-          <p className={styles['profile__name']}>{name}</p>
-          <p className={styles['profile__tag']}>@{tag}</p>
-          <p className={styles['profile__location']}>{location}</p>
+          <p className={styles['Profile__name']}>{name}</p>
+          <p className={styles['Profile__tag']}>@{tag}</p>
+          <p className={styles['Profile__location']}>{location}</p>
         </div>
 
-        <ul className={(styles['profile__stats'], styles['stats'])}>
+        <ul className={(styles['Profile__stats'], styles['stats'])}>
           <li className={styles['stats__item']}>
             <span className={styles['stats__label']}>Followers</span>
             <span className={styles['stats__quantity']}>{followers}</span>

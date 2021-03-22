@@ -1,3 +1,7 @@
+.title {
+  composes: title from '../../index.css';
+}
+
 .Friend__list {
   composes: list from '../../index.css';
 
@@ -9,4 +13,18 @@
   width: 500px;
   height: auto;
   padding: 10px 0;
+}
+
+.Friend__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 450px;
+  height: 100px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border: 2px solid rgb(79, 61, 99);
+  border-radius: 10px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.12), 0px 6px 6px rgba(0, 0, 0, 0.06),
+    2px 6px 8px rgba(0, 0, 0, 0.16);
 }
