@@ -1,0 +1,24 @@
+.Transactions {
+  width: 600px;
+  text-align: center;
+  table-layout: fixed;
+  /* border-collapse: separate; */
+
+  margin-bottom: 50px;
+  border: 3px solid rgb(129, 130, 184);
+  border-radius: 10px;
+  box-shadow: 0px 5px 5px rgba(129, 130, 184, 0.32),
+    0px 6px 6px rgba(129, 130, 184, 0.26), 2px 6px 8px rgba(129, 130, 184, 0.36);
+}
+
+.Transactions__head {
+  background-color: #d1ebff;
+  text-transform: uppercase;
+
+  padding: 20px;
+}
+
+.Transactions th,
+td {
+  padding: 6px 0;
+}
