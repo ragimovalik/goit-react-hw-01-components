@@ -4,25 +4,15 @@ import styles from './FriendList.module.css';
 
 function FriendList({ friends }) {
   return (
-    <>
-      <h3 className={styles.title}>Task - 3</h3>
-
-      {
-        <ul className={styles.Friend__list}>
-          {friends.map(({ id, avatar, name, isOnline }) => {
-            return (
-              <li className={styles.Friend__item} key={id}>
-                <FriendListItem
-                  avatar={avatar}
-                  name={name}
-                  isOnline={isOnline}
-                />
-              </li>
-            );
-          })}
-        </ul>
-      }
-    </>
+    <ul className={styles.Friend__list}>
+      {friends.map(({ id, avatar, name, isOnline }) => {
+        return (
+          <li className={styles.Friend__item} key={id}>
+            <FriendListItem avatar={avatar} name={name} isOnline={isOnline} />
+          </li>
+        );
+      })}
+    </ul>
   );
 }
 

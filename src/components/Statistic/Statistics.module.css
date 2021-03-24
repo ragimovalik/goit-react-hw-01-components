@@ -1,7 +1,3 @@
-.title {
-  composes: title from '../../index.css';
-}
-
 .Statistics {
   display: block;
   border: 4px solid blue;

@@ -33,8 +33,6 @@ function Statistics({ title, stats }) {
 
   return (
     <>
-      <h3 className={styles['title']}>Task - 2</h3>
-
       <section className={styles['Statistics']}>
         <>{title ? listTitle : ''} </>
         <ul className={styles['Stats__list']}>{listItem}</ul>

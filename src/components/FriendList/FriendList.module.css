@@ -1,7 +1,3 @@
-.title {
-  composes: title from '../../index.css';
-}
-
 .Friend__list {
   composes: list from '../../index.css';
 

@@ -1,7 +1,3 @@
-.title {
-  composes: title from '../../index.css';
-}
-
 .Profile__wrap {
   display: flex;
   flex-direction: column;

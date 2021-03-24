@@ -3,9 +3,9 @@ import styles from './TransactionHistory.module.css';
 
 const TransactionHistory = ({ items }) => {
   const tableBody = items.map(({ amount, currency, id, type }, idx) => {
-    const aaa = idx % 2 === 0 ? '#ffffff' : '#d1ebff';
+    const bgcApplying = idx % 2 === 0 ? '#ffffff' : '#d1ebff';
     return (
-      <tr key={id} style={{ backgroundColor: aaa }}>
+      <tr key={id} style={{ backgroundColor: bgcApplying }}>
         <td>{type[0].toUpperCase() + type.substring(1)}</td>
         <td>{amount}</td>
         <td>{currency}</td>
@@ -37,7 +37,7 @@ TransactionHistory.propTypes = {
       id: PropTypes.string.isRequired,
       type: PropTypes.string.isRequired,
     }),
-  ),
+  ).isRequired,
 };
 
 export default TransactionHistory;
