@@ -1,18 +1,6 @@
 import PropTypes from 'prop-types';
+import colorGet from './getColor';
 import styles from './Statistics.module.css';
-
-const colorSet = [
-  '#ffd2d9',
-  '#ffe7c9',
-  '#f9ffc9',
-  '#d3ffd4',
-  '#d1ebff',
-  '#4ea7b9',
-  '#cae43a',
-  '#e9d473',
-  '#bbbbbb',
-  '#aaaaaa',
-];
 
 function Statistics({ title, stats }) {
   const listTitle = <h4 className={styles['Stats__title']}>{title}</h4>;
@@ -21,7 +9,7 @@ function Statistics({ title, stats }) {
     <li
       key={id}
       style={{
-        backgroundColor: colorSet[idx],
+        backgroundColor: colorGet(idx),
         flexBasis: 'calc(100% /' + array.length + ')',
       }}
       className={styles['Stats__item']}
