@@ -4,6 +4,7 @@ import styles from './TransactionHistory.module.css';
 const TransactionHistory = ({ items }) => {
   const tableBody = items.map(({ amount, currency, id, type }, idx) => {
     const bgcApplying = idx % 2 === 0 ? '#ffffff' : '#d1ebff';
+
     return (
       <tr key={id} style={{ backgroundColor: bgcApplying }}>
         <td>{type[0].toUpperCase() + type.substring(1)}</td>
@@ -26,8 +27,6 @@ const TransactionHistory = ({ items }) => {
     </table>
   );
 };
-
-// TransactionHistory.defaultProps = {}
 
 TransactionHistory.propTypes = {
   items: PropTypes.arrayOf(

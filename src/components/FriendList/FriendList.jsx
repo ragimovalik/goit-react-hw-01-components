@@ -5,13 +5,11 @@ import styles from './FriendList.module.css';
 function FriendList({ friends }) {
   return (
     <ul className={styles.Friend__list}>
-      {friends.map(({ id, avatar, name, isOnline }) => {
-        return (
-          <li className={styles.Friend__item} key={id}>
-            <FriendListItem avatar={avatar} name={name} isOnline={isOnline} />
-          </li>
-        );
-      })}
+      {friends.map(({ id, avatar, name, isOnline }) => (
+        <li className={styles.Friend__item} key={id}>
+          <FriendListItem avatar={avatar} name={name} isOnline={isOnline} />
+        </li>
+      ))}
     </ul>
   );
 }

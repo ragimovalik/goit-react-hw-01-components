@@ -22,14 +22,12 @@ function Statistics({ title, stats }) {
   return (
     <>
       <section className={styles['Statistics']}>
-        <>{title ? listTitle : ''} </>
+        {title && listTitle}
         <ul className={styles['Stats__list']}>{listItem}</ul>
       </section>
     </>
   );
 }
-
-// Statistics.defaultProps = {};
 
 Statistics.propTypes = {
   stats: PropTypes.arrayOf(
