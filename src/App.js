@@ -1,18 +1,37 @@
-import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import { routes } from './routes';
+import Nav from './components/Nav';
 import Container from './components/Container/Container';
-import Profile from './components/Profile/Profile';
-import Statistics from './components/Statistic/Statistics';
-import FriendList from './components/FriendList/FriendList';
-import TransactionHistory from './components/TransactionHistory/TransactionHistory';
-import Title from './components/Title/Title';
-import MainTitle from './components/Title/MainTitle';
-import { name, location, tag, avatar, stats } from './data/user.json';
-import statisticalData from './data/statistical-data.json';
-import friends from './data/friends.json';
-import transactions from './data/transactions.json';
+
+// import Title from './components/Title/Title';
+// import MainTitle from './components/Title/MainTitle';
 
 function App() {
   return (
+    <>
+      <Nav />
+      <Container>
+        <Switch>
+          {routes.map(({ path, exact, component: Component, label }) => (
+            <Route
+              key={path}
+              path={path}
+              exact={exact}
+              component={Component}
+              label={label}
+            />
+          ))}
+        </Switch>
+      </Container>
+    </>
+  );
+}
+
+export default App;
+
+/*
+// Non-router markup sample
+
     <Container>
       <MainTitle text={'React Homework #1'} />
 
@@ -41,7 +60,4 @@ function App() {
 
       <TransactionHistory items={transactions} />
     </Container>
-  );
-}
-
-export default App;
+*/

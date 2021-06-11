@@ -6,21 +6,28 @@
   justify-content: center;
   align-items: center;
 
-  width: 500px;
+  width: 450px;
   height: auto;
   padding: 10px 0;
+  margin: 0 auto;
 }
 
 .Friend__item {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 450px;
-  height: 100px;
+  width: 360px;
+  height: 80px;
   padding: 10px 20px;
   margin-bottom: 20px;
   border: 2px solid rgb(79, 61, 99);
   border-radius: 10px;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.12), 0px 6px 6px rgba(0, 0, 0, 0.06),
     2px 6px 8px rgba(0, 0, 0, 0.16);
+
+  transition: transform linear 1000;
+}
+
+.Friend__item:hover {
+  transform: scale(1.05);
 }

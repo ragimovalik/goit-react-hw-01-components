@@ -1,5 +1,6 @@
 .Transactions {
-  width: 600px;
+  min-width: 360px;
+  width: 500px;
   text-align: center;
   table-layout: fixed;
   /* border-collapse: separate; */
