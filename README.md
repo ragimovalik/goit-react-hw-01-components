@@ -4,6 +4,6 @@
 
 #### Task 2 - Friends List
 
-#### Task 1 - Statistics
+#### Task 3 - Statistics
 
-#### Task 1 - Transaction History
+#### Task 4 - Transaction History
